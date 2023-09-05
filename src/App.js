@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
 
@@ -33,8 +34,31 @@ function App() {
   return (
     <>
     <header>
-      <h1>React DO</h1>
+      <div className="header-principal">
+        <h1>Quais suas tarefas hoje?</h1>
+      </div>      
     </header>
+
+    <div className="data">
+      <span>30/08</span>
+      <br></br>
+      <span>QUA</span>
+    </div>
+    
+
+    <header>
+      <div className="header-2">
+      <h3>Título da nota</h3>
+      </div>
+    </header>
+
+    <header>
+      <div className="header-3">
+      <h4>Subtítulo da nota</h4>
+      </div>
+    </header>
+
+    <p>Última modificação hoje às 11:33</p>
 
       <div>
         <input type="text" name="tarefa" placeholder="Digite sua tarefa" value={tarefas.texto} onChange={(e) => setTarefas( { id: Math.random(), texto: e.target.value, status: false } ) } />
